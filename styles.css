@@ -1,0 +1,447 @@
+@font-face {
+  font-family: "Musicals";
+  src: url("fonts/Musicals.ttf") format("truetype");
+}
+
+* html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Header styles */
+header {
+  background-color: #2c3e50;
+  padding: 20px;
+  border-bottom: 1px solid #000;
+  display: flex; /* Flex box for horizontal layout */
+  justify-content: space-between; /* Adding space between items in the header */
+  align-items: center;
+  position: relative; /* Relative position for absolute child elements  */
+}
+/* Centering h1 inside header */
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: #3498db;
+}
+/* Styling link inside h1 to remove purple colour and underline. */
+header h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Navigation menu styles */
+.navMenu {
+  display: flex;
+  margin-left: auto;
+  gap: 15px;
+}
+/* Styling links inside nav menu */
+.navMenu a {
+  color: #3498db;
+  text-decoration: none;
+  justify-content: flex-start;
+}
+/* Adding hover effect to nav menu items */
+.navMenu a:hover {
+  color: #2980b9;
+}
+
+.navMenu h1 {
+  display: flex;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Creating an animation that has the welcome text fly in */
+@keyframes flyIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.welcomeText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  animation: flyIn 1s ease-out;
+  font-family: "Musicals", sans-serif;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Styles and rules for artist cards */
+.coleWorld {
+  flex: 1 1 calc(33.333% - 40px); /* setting up 3 equally sized cards to hold information*/
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #000;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 100%;
+}
+.coleWorld:hover {
+  transform: scale(
+    1.05
+  ); /* have the cards slightlighty grow when hovered over*/
+}
+
+.coleWorld img {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+.coleWorld audio {
+  margin-top: 10px;
+  width: calc(100% - 20px);
+}
+
+.coleWorld p {
+  font-size: 1em;
+  font-weight: bold;
+  color: #2c3e50;
+  line-height: 1.2;
+  margin: 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+h1 {
+  margin: 20px 0;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Using span tags to delay each line of text by a tenth of a second and applying fade in animation to it. */
+
+.coleWorld p span {
+  display: block;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.coleWorld p span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.coleWorld p span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.coleWorld p span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.coleWorld p span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.coleWorld p span:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.coleWorld p span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.coleWorld p span:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.coleWorld p span:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.coleWorld p span:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.coleWorld p span:nth-child(10) {
+  animation-delay: 1s;
+}
+
+.coleWorld p span:nth-child(11) {
+  animation-delay: 1.1s;
+}
+
+.coleWorld p span:nth-child(12) {
+  animation-delay: 1.2s;
+}
+
+.coleWorld p span:nth-child(13) {
+  animation-delay: 1.3s;
+}
+
+.coleWorld p span:nth-child(14) {
+  animation-delay: 1.4s;
+}
+
+/*using keyframes to create the fadeIn effect*/
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.genreBox {
+  flex: 1 1 calc(33.333% - 40px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #000;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 100%;
+}
+
+.genreBox:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.genreBox img {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.genreBox audio {
+  margin-top: 10px;
+  width: calc(100% - 20px);
+}
+
+.genreBox p {
+  font-size: 1em;
+  font-weight: bold;
+  color: #2c3e50;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+.genreBox p span {
+  display: block;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.genreBox p span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.genreBox p span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.genreBox p span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.genreBox p span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.genreBox p span:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.genreBox p span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.genreBox p span:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.genreBox p span:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.genreBox p span:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.genreBox p span:nth-child(10) {
+  animation-delay: 1s;
+}
+
+.genreBox p span:nth-child(11) {
+  animation-delay: 1.1s;
+}
+
+.genreBox p span:nth-child(12) {
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.instrumentBox {
+  flex: 1 1 calc(33.333% - 40px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #000;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 100%;
+}
+
+.instrumentBox:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+/*setting a max size of the images so that the design stays consistent*/
+.instrumentBox img {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/*adjusting the size of the audio boxes so that the design stays consistent*/
+.instrumentBox audio {
+  margin-top: 10px;
+  width: calc(
+    100% - 20px
+  ); /* setting the audio player to be the full width of its container -20px to ensure the card design stays consisent.*/
+}
+
+.instrumentBox p {
+  font-size: 1em;
+  font-weight: bold;
+  color: #2c3e50;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+.instrumentBox p span {
+  display: block;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.instrumentBox p span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.instrumentBox p span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.instrumentBox p span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.instrumentBox p span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.instrumentBox p span:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.instrumentBox p span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.instrumentBox p span:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.instrumentBox p span:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.instrumentBox p span:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.instrumentBox p span:nth-child(10) {
+  animation-delay: 1s;
+}
+
+.instrumentBox p span:nth-child(11) {
+  animation-delay: 1.1s;
+}
+
+.instrumentBox p span:nth-child(12) {
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/*Footer styles*/
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 5px 0; /* setting the vertical space between p tags so its not to big and looks clean */
+}
+
+.footer-content a {
+  color: #3498db;
+  text-decoration: none; /*remove link underlines*/
+  margin: 0 10px;
+}
+
+.footer-content a:hover {
+  color: #2980b9;
+}
+
+.navMenu h1 {
+  display: flex;
+  align-items: center;
+}
+
+.coleWorld iframe {
+  display: none;
+}
